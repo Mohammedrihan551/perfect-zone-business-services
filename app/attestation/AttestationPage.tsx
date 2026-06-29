@@ -557,7 +557,6 @@ export default function AttestationPage() {
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {/* {process[selectedLanguage as "en" | "ar"].map((item, index) => ( */}
             {process[selectedLanguage as "en" | "ar"].map((item, index) => (
               <div
                 key={index}
