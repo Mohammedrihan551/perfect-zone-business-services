@@ -24,7 +24,7 @@ export default function MarriageCertificateAttestationPopup({
   email,
   nationality,
 }: Props) {
-  const [step, setStep] = useState(currentStep ? currentStep : 1);
+  const [step, setStep] = useState<number>(currentStep ?? 1);
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
