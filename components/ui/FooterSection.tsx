@@ -261,11 +261,11 @@ export default function FooterSection() {
           {/* Services */}
           <div>
             <h4 className="text-sm font-semibold text-white">
-              {service[selectedLanguage].services}
+              {service[selectedLanguage as "en" | "ar"].services}
             </h4>
 
             <ul className="mt-5 space-y-3 text-sm text-slate-400">
-              {service[selectedLanguage].items.map((item) => (
+              {service[selectedLanguage as "en" | "ar"].items.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="group inline-block">
                     <span className="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
@@ -280,11 +280,11 @@ export default function FooterSection() {
           {/* Company */}
           <div>
             <h4 className="text-sm font-semibold text-white">
-              {company[selectedLanguage].company}
+              {company[selectedLanguage as "en" | "ar"].company}
             </h4>
 
             <ul className="mt-5 space-y-3 text-sm text-slate-400">
-              {company[selectedLanguage].items.map((item) => (
+              {company[selectedLanguage as "en" | "ar"].items.map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="group inline-block">
                     <span>{item.label}</span>
@@ -307,11 +307,11 @@ export default function FooterSection() {
 
               <div className="leading-tight">
                 <p className="text-xs text-slate-500">
-                  {contact[selectedLanguage].phone}
+                  {contact[selectedLanguage as "en" | "ar"].phone}
                 </p>
 
                 <p className="text-sm transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                  {contact[selectedLanguage].number}
+                  {contact[selectedLanguage as "en" | "ar"].number}
                 </p>
               </div>
             </a>
@@ -327,7 +327,7 @@ export default function FooterSection() {
 
               <div className="leading-tight">
                 <p className="text-xs text-slate-500">
-                  {contact[selectedLanguage].email}
+                  {contact[selectedLanguage as "en" | "ar"].email}
                 </p>
 
                 <p className="text-sm break-all transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
@@ -348,11 +348,11 @@ export default function FooterSection() {
 
               <div className="leading-tight">
                 <p className="text-xs text-slate-500">
-                  {contact[selectedLanguage].office}
+                  {contact[selectedLanguage as "en" | "ar"].office}
                 </p>
 
                 <p className="text-sm transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                  {contact[selectedLanguage].address}
+                  {contact[selectedLanguage as "en" | "ar"].address}
                 </p>
               </div>
             </a>

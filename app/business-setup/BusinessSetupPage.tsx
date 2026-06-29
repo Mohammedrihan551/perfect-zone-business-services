@@ -485,7 +485,7 @@ export default function BusinessSetupPage() {
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {process[selectedLanguage].map((item, index) => (
+            {process[selectedLanguage as "en" | "ar"].map((item, index) => (
               <div
                 key={index}
                 className="group rounded-xl border border-slate-200 bg-[#eef5ff] p-5 transition-all duration-300 hover:border-[#31a4da]/20"
