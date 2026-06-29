@@ -4,7 +4,7 @@ export default function FloatingContactButtons() {
       <div className="overflow-hidden rounded-l-2xl border-b border-l border-t border-slate-200 bg-white shadow-xl">
         {/* Call */}
         <a
-          href="tel:+971521234567"
+          href="tel:+971521279636"
           className="flex h-12 w-12 items-center justify-center border-b border-slate-200 transition-all duration-300 hover:bg-[#31a4da]/5"
         >
           <svg
@@ -70,7 +70,7 @@ export default function FloatingContactButtons() {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/971521234567"
+          href="https://wa.me/971521279636"
           rel="noopener noreferrer"
           className="flex h-12 w-12  items-center justify-center bg-white transition hover:bg-slate-50"
         >
