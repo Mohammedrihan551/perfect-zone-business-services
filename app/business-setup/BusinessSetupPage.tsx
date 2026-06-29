@@ -399,7 +399,7 @@ export default function BusinessSetupPage() {
               <div className="relative h-14 w-14 overflow-hidden rounded-xl border border-slate-200">
                 <Image
                   src={service.image}
-                  alt={service.title[selectedLanguage]}
+                  alt={service.title[selectedLanguage as "en" | "ar"]}
                   fill
                   className="object-cover"
                 />

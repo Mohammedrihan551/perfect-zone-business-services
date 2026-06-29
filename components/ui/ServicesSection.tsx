@@ -403,7 +403,7 @@ export default function ServicesSection() {
                       <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl">
                         <img
                           src={service.image}
-                          alt={service.title[selectedLanguage]}
+                          alt={service.title[selectedLanguage as "en" | "ar"]}
                           className="h-full w-full  object-cover transition-transform duration-500 group-hover:scale-105"
                         />
 
@@ -618,7 +618,7 @@ export default function ServicesSection() {
                       <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl">
                         <img
                           src={service.image}
-                          alt={service.title[selectedLanguage]}
+                          alt={service.title[selectedLanguage as "en" | "ar"]}
                           className="h-full w-full  object-cover transition-transform duration-500 group-hover:scale-105"
                         />
 
@@ -829,7 +829,7 @@ export default function ServicesSection() {
                       <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl">
                         <img
                           src={service.image}
-                          alt={service.title[selectedLanguage]}
+                          alt={service.title[selectedLanguage as "en" | "ar"]}
                           className="h-full w-full  object-cover transition-transform duration-500 group-hover:scale-105"
                         />
 
@@ -1040,7 +1040,7 @@ export default function ServicesSection() {
                       <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl">
                         <img
                           src={service.image}
-                          alt={service.title[selectedLanguage]}
+                          alt={service.title[selectedLanguage as "en" | "ar"]}
                           className="h-full w-full  object-cover transition-transform duration-500 group-hover:scale-105"
                         />
 
