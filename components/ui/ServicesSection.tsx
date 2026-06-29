@@ -248,7 +248,7 @@ export default function ServicesSection() {
                   : "border border-slate-200 bg-white text-slate-600 hover:border-[#31a4da]/40 hover:text-[#704c9f]"
               }`}
             >
-              {category.label[selectedLanguage]}
+              {category.label[selectedLanguage as "en" | "ar"]}
             </button>
           ))}
         </div>
