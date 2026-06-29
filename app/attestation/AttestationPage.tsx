@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import BookConsultancyPopup from "@/components/ui/BookConsultancyPopup";
 import MOFAAttestationPopup from "@/components/ui/MOFAAttestationPopup";
 import EmbassyAttestationPopup from "@/components/ui/EmbassyAttestationPopup";
 import DegreeCertificateAttestationPopup from "@/components/ui/DegreeCertificateAttestationPopup";
@@ -489,20 +488,22 @@ export default function AttestationPage() {
 
               {/* Description */}
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                {service.description[selectedLanguage]}
+                {service.title[selectedLanguage as "en" | "ar"]}
               </p>
 
               {/* Features */}
               <div className="mt-5 space-y-2.5">
-                {service.features[selectedLanguage].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#31a4da] to-[#704c9f]" />
+                {service.features[selectedLanguage as "en" | "ar"].map(
+                  (feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#31a4da] to-[#704c9f]" />
 
-                    <span className="text-sm font-medium text-slate-700">
-                      {feature}
-                    </span>
-                  </div>
-                ))}
+                      <span className="text-sm font-medium text-slate-700">
+                        {feature}
+                      </span>
+                    </div>
+                  ),
+                )}
               </div>
 
               {/* CTA */}
