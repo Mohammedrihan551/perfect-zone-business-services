@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 :root {
+  --font-primary: var(--font-dm-sans);
+  --font-arabic: var(--font-tajawal);
+
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -8,19 +11,142 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-primary);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+}
+
+/* Arabic */
+html[dir="rtl"],
+html[lang="ar"] {
+  font-family: var(--font-arabic);
+}
+
+/* Container */
+.custom-phone-container {
+  width: 100% !important;
+  position: relative;
+}
+
+/* Input */
+.custom-phone-input {
+  width: 100% !important;
+  height: 42px !important;
+  padding-left: 72px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  color: white !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.custom-phone-input:focus {
+  border-color: #31a4da !important;
+  box-shadow: 0 0 0 3px rgba(49, 164, 218, 0.15) !important;
+}
+
+/* Error */
+.custom-phone-error {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+}
+
+/* Flag Button */
+.custom-phone-button {
+  background: transparent !important;
+  border: none !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px 0 0 8px !important;
+  width: 58px !important;
+}
+
+.custom-phone-button:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Selected Flag */
+.custom-phone-button .selected-flag {
+  background: transparent !important;
+  padding-left: 14px !important;
+}
+
+.custom-phone-button .selected-flag:hover {
+  background: transparent !important;
+}
+
+/* Dropdown */
+.custom-phone-dropdown {
+  background: #162235 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+
+  max-height: 175px !important;
+  overflow-y: auto !important;
+
+  scrollbar-width: thin;
+}
+
+/* Search */
+.custom-phone-dropdown .search {
+  background: #162235 !important;
+  padding: 10px !important;
+}
+
+.custom-phone-dropdown .search input {
+  width: 100% !important;
+  height: 30px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 6px !important;
+  color: white !important;
+}
+
+/* Countries */
+.custom-phone-dropdown .country {
+  color: white !important;
+  padding: 8px 14px !important;
+}
+
+.custom-phone-dropdown .country:hover {
+  background: rgba(49, 164, 218, 0.12) !important;
+}
+
+.custom-phone-dropdown .country.highlight {
+  background: rgba(49, 164, 218, 0.15) !important;
+}
+
+/* Always keep phone field LTR */
+.phone-ltr,
+.phone-ltr * {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Input */
+.phone-ltr .custom-phone-input {
+  padding-left: 72px !important;
+  padding-right: 14px !important;
+}
+
+/* Flag button stays on left */
+.phone-ltr .custom-phone-button {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Dropdown */
+.phone-ltr .custom-phone-dropdown {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Search box */
+.phone-ltr .custom-phone-dropdown .search input {
+  direction: ltr !important;
+  text-align: left !important;
 }
