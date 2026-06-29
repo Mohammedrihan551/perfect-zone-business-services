@@ -259,6 +259,7 @@ export default function FooterSection() {
           </div>
 
           {/* Services */}
+          {/* Services */}
           <div>
             <h4 className="text-sm font-semibold text-white">
               {service[selectedLanguage as "en" | "ar"].services}
