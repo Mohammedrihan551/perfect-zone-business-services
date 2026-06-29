@@ -22,20 +22,19 @@ export default function AttestationPage() {
   const [selectedService, setSelectedService] = useState("");
   const [openServicePopup, setOpenServicePopup] = useState(false);
 
-  const [selectedConsultancyService, setSelectedConsultancyService] =
-    useState("");
-
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [nationality, setNationality] = useState("");
 
   const handlePopup = () => {
+    setCurrentStep(2);
     setOpenPopup(true);
   };
 
   const handleCategory = (category: string) => {
+    setCurrentStep(1);
     setSelectedService(category);
     setOpenServicePopup(true);
   };
@@ -584,7 +583,7 @@ export default function AttestationPage() {
         open={openPopup}
         onClose={() => setOpenPopup(false)}
         setOpenServicePopup={setOpenServicePopup}
-        setSelectedConsultancyService={setSelectedConsultancyService}
+        setSelectedService={setSelectedService}
         setName={setName}
         setMobile={setMobile}
         setEmail={setEmail}
@@ -643,71 +642,6 @@ export default function AttestationPage() {
           nationality={nationality}
         />
       ) : selectedService == "Commercial Document Attestation" ? (
-        <CommercialDocumentAttestationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : (
-        ""
-      )}
-
-      {selectedConsultancyService == "MOFA Attestation" ? (
-        // Attestation Services
-        <MOFAAttestationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Embassy Attestation" ? (
-        <EmbassyAttestationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Degree Certificate Attestation" ? (
-        <DegreeCertificateAttestationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Marriage Certificate Attestation" ? (
-        <MarriageCertificateAttestationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Birth Certificate Attestation" ? (
-        <BirthCertificateAttestationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Commercial Document Attestation" ? (
         <CommercialDocumentAttestationPopup
           open={openServicePopup}
           onClose={() => setOpenServicePopup(false)}

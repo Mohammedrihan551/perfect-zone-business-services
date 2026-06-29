@@ -23,20 +23,19 @@ export default function TranslationPage() {
   const [selectedService, setSelectedService] = useState("");
   const [openServicePopup, setOpenServicePopup] = useState(false);
 
-  const [selectedConsultancyService, setSelectedConsultancyService] =
-    useState("");
-
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [nationality, setNationality] = useState("");
 
   const handlePopup = () => {
+    setCurrentStep(2);
     setOpenPopup(true);
   };
 
   const handleCategory = (category: string) => {
+    setCurrentStep(1);
     setSelectedService(category);
     setOpenServicePopup(true);
   };
@@ -528,7 +527,7 @@ export default function TranslationPage() {
         open={openPopup}
         onClose={() => setOpenPopup(false)}
         setOpenServicePopup={setOpenServicePopup}
-        setSelectedConsultancyService={setSelectedConsultancyService}
+        setSelectedService={setSelectedService}
         setName={setName}
         setMobile={setMobile}
         setEmail={setEmail}
@@ -591,71 +590,6 @@ export default function TranslationPage() {
           open={openServicePopup}
           onClose={() => setOpenServicePopup(false)}
           currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : (
-        ""
-      )}
-
-      {selectedConsultancyService == "Legal Translation" ? (
-        // Translation Services
-        <LegalTranslationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Certified Translation" ? (
-        <CertifiedTranslationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Medical Translation" ? (
-        <MedicalTranslationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Technical Translation" ? (
-        <TechnicalTranslationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Business Translation" ? (
-        <BusinessTranslationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Website Translation" ? (
-        <WebsiteTranslationPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
           name={name}
           mobile={mobile}
           email={email}

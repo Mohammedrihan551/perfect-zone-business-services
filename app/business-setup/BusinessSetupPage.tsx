@@ -22,20 +22,19 @@ export default function BusinessSetupPage() {
   const [selectedService, setSelectedService] = useState("");
   const [openServicePopup, setOpenServicePopup] = useState(false);
 
-  const [selectedConsultancyService, setSelectedConsultancyService] =
-    useState("");
-
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [nationality, setNationality] = useState("");
 
   const handlePopup = () => {
+    setCurrentStep(2);
     setOpenPopup(true);
   };
 
   const handleCategory = (category: string) => {
+    setCurrentStep(1);
     setSelectedService(category);
     setOpenServicePopup(true);
   };
@@ -512,7 +511,7 @@ export default function BusinessSetupPage() {
         open={openPopup}
         onClose={() => setOpenPopup(false)}
         setOpenServicePopup={setOpenServicePopup}
-        setSelectedConsultancyService={setSelectedConsultancyService}
+        setSelectedService={setSelectedService}
         setName={setName}
         setMobile={setMobile}
         setEmail={setEmail}
@@ -571,71 +570,6 @@ export default function BusinessSetupPage() {
           nationality={nationality}
         />
       ) : selectedService == "Business Consultancy" ? (
-        <BusinessConsultancyPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : (
-        ""
-      )}
-
-      {selectedConsultancyService == "Mainland Company Formation" ? (
-        // Business Setup
-        <MainlandCompanyPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Free Zone Company Setup" ? (
-        <FreeZoneCompanyPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Offshore Company Formation" ? (
-        <OffshoreCompanyPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Trade License Services" ? (
-        <TradeLicensePopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Corporate Bank Account" ? (
-        <CorporateBankPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Business Consultancy" ? (
         <BusinessConsultancyPopup
           open={openServicePopup}
           onClose={() => setOpenServicePopup(false)}
