@@ -9,7 +9,7 @@ interface Props {
   open: boolean;
   onClose: () => void;
   setOpenServicePopup: any;
-  setSelectedConsultancyService: any;
+  setSelectedService: any;
   setName: any;
   setMobile: any;
   setEmail: any;
@@ -20,7 +20,7 @@ export default function BusinessSetupConsultancyPopup({
   open,
   onClose,
   setOpenServicePopup,
-  setSelectedConsultancyService,
+  setSelectedService,
   setName,
   setMobile,
   setEmail,
@@ -277,7 +277,7 @@ export default function BusinessSetupConsultancyPopup({
       setStep(1);
       onClose();
       setOpenServicePopup(true);
-      setSelectedConsultancyService(form.serviceType);
+      setSelectedService(form.serviceType);
       setName(form.name);
       setMobile(form.mobile);
       setEmail(form.email);
@@ -489,10 +489,10 @@ ${form.notes}
                   onChange={handleChange}
                   options={[
                     "Mainland Company Formation",
-                    "Freezone Company",
-                    "Offshore Company",
-                    "Trade License",
-                    "Corporate Bank",
+                    "Free Zone Company Setup",
+                    "Offshore Company Formation",
+                    "Trade License Services",
+                    "Corporate Bank Account",
                     "Business Consultancy",
                     "Other",
                   ]}

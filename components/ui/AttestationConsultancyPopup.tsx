@@ -9,7 +9,7 @@ interface Props {
   open: boolean;
   onClose: () => void;
   setOpenServicePopup: any;
-  setSelectedConsultancyService: any;
+  setSelectedService: any;
   setName: any;
   setMobile: any;
   setEmail: any;
@@ -20,7 +20,7 @@ export default function AttestationConsultancyPopup({
   open,
   onClose,
   setOpenServicePopup,
-  setSelectedConsultancyService,
+  setSelectedService,
   setName,
   setMobile,
   setEmail,
@@ -277,7 +277,7 @@ export default function AttestationConsultancyPopup({
       setStep(1);
       onClose();
       setOpenServicePopup(true);
-      setSelectedConsultancyService(form.serviceType);
+      setSelectedService(form.serviceType);
       setName(form.name);
       setMobile(form.mobile);
       setEmail(form.email);

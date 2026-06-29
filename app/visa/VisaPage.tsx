@@ -23,20 +23,19 @@ export default function VisaPage() {
   const [selectedService, setSelectedService] = useState("");
   const [openServicePopup, setOpenServicePopup] = useState(false);
 
-  const [selectedConsultancyService, setSelectedConsultancyService] =
-    useState("");
-
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [nationality, setNationality] = useState("");
 
   const handlePopup = () => {
+    setCurrentStep(2);
     setOpenPopup(true);
   };
 
   const handleCategory = (category: string) => {
+    setCurrentStep(1);
     setSelectedService(category);
     setOpenServicePopup(true);
   };
@@ -509,7 +508,7 @@ export default function VisaPage() {
         open={openPopup}
         onClose={() => setOpenPopup(false)}
         setOpenServicePopup={setOpenServicePopup}
-        setSelectedConsultancyService={setSelectedConsultancyService}
+        setSelectedService={setSelectedService}
         setName={setName}
         setMobile={setMobile}
         setEmail={setEmail}
@@ -572,71 +571,6 @@ export default function VisaPage() {
           open={openServicePopup}
           onClose={() => setOpenServicePopup(false)}
           currentStep={currentStep}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : (
-        ""
-      )}
-
-      {selectedConsultancyService == "Golden Visa" ? (
-        // Visa Services
-        <GoldenVisaPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Family Visa" ? (
-        <FamilyVisaPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Employment Visa" ? (
-        <EmploymentVisaPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Investor Visa" ? (
-        <InvestorVisaPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Partner Visa" ? (
-        <PartnerVisaPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
-          name={name}
-          mobile={mobile}
-          email={email}
-          nationality={nationality}
-        />
-      ) : selectedConsultancyService == "Freelance Visa" ? (
-        <FreelanceVisaPopup
-          open={openServicePopup}
-          onClose={() => setOpenServicePopup(false)}
-          currentStep={2}
           name={name}
           mobile={mobile}
           email={email}
