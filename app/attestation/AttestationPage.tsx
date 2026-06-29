@@ -481,7 +481,7 @@ export default function AttestationPage() {
               {/* Title */}
               <h3 className="mt-5 text-xl font-semibold text-slate-900">
                 <span className="transition duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                  {service.title[selectedLanguage]}
+                  {service.title[selectedLanguage as "en" | "ar"]}
                 </span>
               </h3>
 

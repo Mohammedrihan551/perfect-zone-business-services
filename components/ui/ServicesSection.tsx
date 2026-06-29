@@ -416,7 +416,7 @@ export default function ServicesSection() {
                         <div className=" flex items-start gap-2">
                           <h3 className="text-base font-semibold leading-6 tracking-tight">
                             <span className="text-slate-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                              {service.title[selectedLanguage]}
+                              {service.title[selectedLanguage as "en" | "ar"]}
                             </span>
                           </h3>
                         </div>
@@ -631,7 +631,7 @@ export default function ServicesSection() {
                         <div className=" flex items-start gap-2">
                           <h3 className="text-base font-semibold leading-6 tracking-tight">
                             <span className="text-slate-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                              {service.title[selectedLanguage]}
+                              {service.title[selectedLanguage as "en" | "ar"]}
                             </span>
                           </h3>
                         </div>
@@ -842,7 +842,7 @@ export default function ServicesSection() {
                         <div className=" flex items-start gap-2">
                           <h3 className="text-base font-semibold leading-6 tracking-tight">
                             <span className="text-slate-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                              {service.title[selectedLanguage]}
+                              {service.title[selectedLanguage as "en" | "ar"]}
                             </span>
                           </h3>
                         </div>
@@ -1053,7 +1053,7 @@ export default function ServicesSection() {
                         <div className=" flex items-start gap-2">
                           <h3 className="text-base font-semibold leading-6 tracking-tight">
                             <span className="text-slate-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#31a4da] group-hover:to-[#704c9f] group-hover:bg-clip-text group-hover:text-transparent">
-                              {service.title[selectedLanguage]}
+                              {service.title[selectedLanguage as "en" | "ar"]}
                             </span>
                           </h3>
                         </div>
