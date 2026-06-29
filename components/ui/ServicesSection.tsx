@@ -425,7 +425,7 @@ export default function ServicesSection() {
 
                         {/* Description */}
                         <p className="text-xs leading-5 text-slate-600 line-clamp-2">
-                          {service.description[selectedLanguage]}
+                          {service.title[selectedLanguage as "en" | "ar"]}
                         </p>
                       </div>
                     </div>
@@ -640,7 +640,7 @@ export default function ServicesSection() {
 
                         {/* Description */}
                         <p className="text-xs leading-5 text-slate-600 line-clamp-2">
-                          {service.description[selectedLanguage]}
+                          {service.title[selectedLanguage as "en" | "ar"]}
                         </p>
                       </div>
                     </div>
@@ -851,7 +851,7 @@ export default function ServicesSection() {
 
                         {/* Description */}
                         <p className="text-xs leading-5 text-slate-600 line-clamp-2">
-                          {service.description[selectedLanguage]}
+                          {service.title[selectedLanguage as "en" | "ar"]}
                         </p>
                       </div>
                     </div>
@@ -1062,7 +1062,7 @@ export default function ServicesSection() {
 
                         {/* Description */}
                         <p className="text-xs leading-5 text-slate-600 line-clamp-2">
-                          {service.description[selectedLanguage]}
+                          {service.title[selectedLanguage as "en" | "ar"]}
                         </p>
                       </div>
                     </div>
